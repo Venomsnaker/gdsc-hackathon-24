@@ -1,7 +1,7 @@
 from flask import Flask
 from model import load_model_class, predict_single_image
 
-model_path = "./rice_leaf_diseases.h5"
+model_path = "rice_leaf_diseases.h5"
 
 app = Flask(__name__)
 

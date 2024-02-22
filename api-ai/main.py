@@ -18,7 +18,7 @@ def predict():
 
         image_file = request.files["image"]
 
-        image_path = "./image/predict.jpg"
+        image_path = "api-ai/image/predict.jpg"
 
         image_file.save(image_path)
 

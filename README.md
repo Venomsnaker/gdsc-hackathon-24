@@ -10,9 +10,11 @@ Là một object
 ```ts
 interface Response {
   message: string
-  data?: any
+  data: any
 }
 ```
+
+## Lưu ý : trả về không có data: {} nghĩa là có lỗi
 
 Ví dụ
 
@@ -48,10 +50,8 @@ Ví dụ đăng ký email đã tồn tại
 
 ```json
 {
-  "message": "Lỗi",
-  "data": {
-    "email": "Email đã tồn tại"
-  }
+  "message": "Email đã tồn tại",
+  "data": {}
 }
 ```
 
@@ -59,12 +59,12 @@ Ví dụ đăng ký email đã tồn tại
 
 ```json
 {
-  "message": "Lỗi do abcxyz",
-"data": {}
+    "message": "Lỗi do abcxyz",
+    "data": {}
 }
 ```
 
-## Register: `/register`
+## Register: `/auth/register`
 
 Method: POST
 body
@@ -85,23 +85,37 @@ Response
 
 ```json
 {
-  "message": "Đăng ký thành công",
-  "data": {
-    "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxNUBnbWFpbC5jb20iLCJpZCI6IjYwYzZmNGViNGVhMWRlMzg5ZjM1NjA1YiIsInJvbGVzIjpbIlVzZXIiXSwiY3JlYXRlZF9hdCI6IjIwMjEtMDYtMTRUMDY6MTk6MjMuNzQ5WiIsImlhdCI6MTYyMzY1MTU2MywiZXhwIjoxNjI0MjU2MzYzfQ.WbNgnd4cewdDNpx-ZLebk1kLgogLctBqgh9fc9Mb3yg",
-    "expires": "7d",
-    "user": {
-      "roles": ["User"],
-      "_id": "60c6f4eb4ea1de389f35605b",
-      "email": "user15@gmail.com",
-      "createdAt": "2021-06-14T06:19:23.703Z",
-      "updatedAt": "2021-06-14T06:19:23.703Z",
-      "__v": 0
+    "message": "Register success",
+    "data": {
+        "user_id": "-NrJivU6cWchrT3RlBHw",
+        "email": "dotu30357",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfcXAJB6hubpKgNC95BByFgMzQRe37d1o9eA&usqp=CAU"
     }
-  }
+}
+```
+Or 
+```json
+{
+    "message": "User already exist",
+    "data": {}
+}
+```
+Or
+```json
+{
+    "message": "Password is required",
+    "data": {}
+}
+```
+Or
+```json
+{
+    "message": "Email is required",
+    "data": {}
 }
 ```
 
-## Login: `/login`
+## Login: `/auth/login`
 
 Method: POST
 body
@@ -112,33 +126,113 @@ body
   "password": "123456"
 }
 ```
-
-<!-- Rules
-
-- email: required, length: 5-160, isEmail
-- password: required, length: 6-160 -->
+Or
+```json
+{
+    "message": "User not found",
+    "data": {}
+}
+```
+Or
+```json
+{
+    "message": "Password is required",
+    "data": {}
+}
+```
+Or
+```json
+{
+    "message": "Email is required",
+    "data": {}
+}
+```
 
 Response
 
 ```json
 {
-  "message": "Đăng nhập thành công",
-  "data": {
-    "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOThmNWI1MTY5MDU1MzZlODE4ZjhjYyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZXMiOlsiVXNlciIsIkFkbWluIl0sImNyZWF0ZWRfYXQiOiIyMDIxLTA2LTE0VDA4OjA4OjI4LjQ5NVoiLCJpYXQiOjE2MjM2NTgxMDgsImV4cCI6MTYyNDI2MjkwOH0.8YITBWt6SXikoaBHf-SlOh_h7ii0UgwY_5-bjCirY",
-    "expires": "7d",
-    "user": {
-      "_id": "6098f5b516905536e818f8cc",
-      "roles": ["User"],
-      "email": "user2@gmail.com",
-      "name": "Real user",
-      "date_of_birth": null,
-      "address": "",
-      "phone": "",
-      "createdAt": "2021-05-10T08:58:29.081Z",
-      "updatedAt": "2021-05-10T08:58:29.081Z",
-      "__v": 0
+    "message": "login success",
+    "data": {
+        "user_id": "-NrJhxxPkzi7fidzsMs2",
+        "email": "dotu30157",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfcXAJB6hubpKgNC95BByFgMzQRe37d1o9eA&usqp=CAU"
     }
-  }
+}
+```
+
+## Đôit mật khẩu : /auth/change-password/
+
+Method: POST
+
+boyd :
+```json
+{
+    "email" : "dotu30257" , 
+    "new_password" : "a",
+    "password" : "a"
+}
+```
+Response 
+```json
+{
+    "message": "Password changed successfully",
+    "data": {
+        "id": "-NrJhk4ATrF82aAlL9XH",
+        "email": "dotu30257",
+        "password": "a",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfcXAJB6hubpKgNC95BByFgMzQRe37d1o9eA&usqp=CAU"
+    }
+}
+```
+Or 
+```json 
+{
+    "message": "User not found",
+    "data": {}
+}
+```
+Or 
+```json 
+{
+    "message": "Password is incorrect",
+    "data": {}
+}
+```
+Or 
+```json 
+{
+    "message": "new_password is required",
+    "data": {}
+}
+```
+
+## get me : /auth/me/:user_id
+
+Method: GET
+
+Response 
+```json
+{
+    "message": "Get user successfully",
+    "data": {
+        "user_id": "-NrJhk4ATrF82aAlL9XH",
+        "email": "dotu30257",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfcXAJB6hubpKgNC95BByFgMzQRe37d1o9eA&usqp=CAU"
+    }
+}
+```
+```json
+{
+    "message": "User not found",
+    "data": {}
+}
+```
+Or 
+```json
+{
+    "message": "user_id is required",
+    "data": {}
 }
 ```
 

@@ -7,7 +7,7 @@ Smart Harvest is a solution for farmers in Vietnam. The solution's main target i
 # Target Devices
 Android and iOS (in development)
 # Where to start?
-APK File
+[APK Files](https://github.com/Venomsnaker/smart-harvest/releases/tag/beta)
 # Models
 **Rice Leaf Diseases Classification**
 - Dataset: https://www.kaggle.com/datasets/loki4514/rice-leaf-diseases-detection

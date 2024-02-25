@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "465566998514",
+    "firebase_url": "https://gdsc-congnong-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "gdsc-congnong",
+    "storage_bucket": "gdsc-congnong.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465566998514:android:0b9c2fd94b1402583f156b",
+        "android_client_info": {
+          "package_name": "com.congnong.smartharvest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJgAm_QnCh_YEOng5LLVT5r_GvYZ7hrCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465566998514:android:a7fe5b951d4567c63f156b",
+        "android_client_info": {
+          "package_name": "com.example.congnong"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJgAm_QnCh_YEOng5LLVT5r_GvYZ7hrCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465566998514:android:f4befaef69be42033f156b",
+        "android_client_info": {
+          "package_name": "com.example.gdsc_congnong"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJgAm_QnCh_YEOng5LLVT5r_GvYZ7hrCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

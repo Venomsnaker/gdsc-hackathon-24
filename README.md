@@ -31,47 +31,21 @@ Comments
 
 ## Features and Demo
 ### Web App
-<div style="display: flex; gap: 10px;">
-    <div>
-        <img src="smart_harvest/src/assets/images/web-home.png" alt="Landing Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Landing Page</p>
-    </div>
-    <div>
-        <img src="smart_harvest/src/assets/images/web-dashboard.png" alt="Home Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Home Page</p>
-    </div>
-</div>
+| ![Landing Page](smart_harvest/src/assets/images/web-home.png) | ![Home Page](smart_harvest/src/assets/images/web-dashboard.png) |
+| :----------------------------------------------------------: | :------------------------------------------------------------: |
+| Landing Page                                                | Home Page                                                     |
 
-<div style="display: flex; gap: 10px;">
-    <div>
-        <img src="smart_harvest/src/assets/images/web-predict.png" alt="Landing Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Diseases Prediction Page</p>
-    </div>
-    <div>
-        <img src="smart_harvest/src/assets/images/web-note.png" alt="Home Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Note and Planing Page</p>
-    </div>
-</div>
+
+| ![Diseases Prediction Page](smart_harvest/src/assets/images/web-predict.png) | ![Note and Planning Page](smart_harvest/src/assets/images/web-note.png) |
+| :--------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
+| Diseases Prediction Page                                                    | Note and Planning Page                                                 |
 
 ### Mobile App
-<div style="display: flex; gap: 10px;">
-    <div>
-        <img src="smart_harvest/src/assets/images/mobile-shop.png" alt="Landing Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Martket Nearest</p>
-    </div>
-    <div>
-        <img src="smart_harvest/src/assets/images/mobile-note.png" alt="Home Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Note and Planing</p>
-    </div>
-    <div>
-        <img src="smart_harvest/src/assets/images/mobile-predict-input.png" alt="Landing Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Diseases Prediction Page</p>
-    </div>
-    <div>
-        <img src="smart_harvest/src/assets/images/mobile-predict.png" alt="Home Page" style="width: 100%; max-width: 400px;">
-        <p style="text-align: center;">Predict Results</p>
-    </div>
-</div>
+
+| ![Market Nearest](smart_harvest/src/assets/images/mobile-shop.png) | ![Note and Planning](smart_harvest/src/assets/images/mobile-note.png) | ![Diseases Prediction Page](smart_harvest/src/assets/images/mobile-predict-input.png) | ![Predict Results](smart_harvest/src/assets/images/mobile-predict.png) |
+| :---------------------------------------------------------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------: |
+| Market Nearest                                                   | Note and Planning                                                   | Diseases Prediction Page                                                            | Predict Results                                                      |
+
 
 ## TODO
 - [ ] Add more features.
